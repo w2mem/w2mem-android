@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+
+    <style name="W2memTheme" parent="@android:style/Theme.Light.NoTitleBar.Fullscreen">
+        <item name="android:windowBackground">@drawable/cover</item>
+        <item name="android:buttonStyle">@style/W2memButton</item>
+        <item name="android:listViewStyle">@style/W2memListView</item>
+    </style>
+    
+    <style name="W2memThemeWithBigSize" parent="@android:style/Theme.Light.NoTitleBar.Fullscreen">
+        <item name="android:windowBackground">@drawable/cover</item>
+        <item name="android:buttonStyle">@style/W2memButtonWithBigSize</item>
+        <item name="android:listViewStyle">@style/W2memListView</item>
+    </style>
+    
+   	<style name="W2memButtonWithBigSize" parent="@android:style/Widget.Button">
+        <item name="android:background">@drawable/button</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">20dp</item>
+    </style>
+
+    <style name="W2memButton" parent="@android:style/Widget.Button">
+        <item name="android:background">@drawable/button</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">15dp</item>
+    </style>
+
+    <style name="W2memListView" parent="@android:style/Widget.ListView">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:gestureColor">@android:color/transparent</item>
+        <item name="android:uncertainGestureColor">@android:color/transparent</item>
+        <item name="android:cacheColorHint">#00000000</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">15dp</item>
+    </style>
+
+    <style name="W2memLoginDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:buttonStyle">@style/W2memButton</item>
+    </style>
+
+</resources>

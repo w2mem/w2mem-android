@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	
+    <!-- ATARAXER's -->
+    <string name="wrnChooseDicts">Choose at least one dictionary</string>
+    
+    <!-- DIALOGS -->
+    <string name="accept">Accept</string>
+    <string name="cancel">Cancel</string>
+    <string name="hintNewName">Enter new name</string>
+    <string name="hintTranslate">Translation</string>
+    <string name="hintLogin">Login</string>
+    <string name="hintPassword">Password</string>
+    <string name="titleFinished">Dictionaries have been successfully downloaded. Now, you can use them offline!</string>
+    <string name="startNow">Start now!</string>
+    <string name="later">Later</string>
+    <string name="tvWelcome">Welcome to the W2mem app! \n \n 
+        Application allows you to make personal lists of words and
+        expressions in the target language, and to periodically check their knowledge.
+        You can also download your own dictionaries,
+        that you have made on our website W2mem.com!</string>
+	<!-- GENERAL -->
+    <string name="app_name">W2mem</string>
+    <!-- MAIN MENU -->
+    <string name="btnStartOffline">Start learning!</string>
+    <string name="btnStartOnline">Download dictionaries</string>
+    <string name="btnNoProfile">Don\'t have a profile?</string>
+    <!-- TESTS -->
+    <string name="btnStartOwnDict">Personal dictionaries</string>
+    <string name="btnStartDefaultDict">Default dictionaries</string>
+    <string name="btnStartOwnPhraseDict">Start learn own phrase dicts</string>
+    <string name="btnStartDefaultPhraseDict">Start learn default phrase dicts</string>
+    <string name="btnAddTopic">Add Dictionary</string>
+    <string name="btnStartTopic">Start practicing</string>
+    <string name="btnNext">Next</string>
+    <string name="tvName">Write a name of new dict</string>
+    <string name="wrnEmptyEt">You must fill out the field</string>
+    <string name="wrnEmptyTopic">Chosen dictionary is empty!</string>
+    <string name="btnAddCouple">Add the couple of words</string>
+    <string name="btnSave">Save</string>
+    <string name="hintWord">Word</string>
+    
+    <string name="cxMenuRename">Rename</string>
+
+    <string name="cxMenuDelete">Delete</string>
+    <string name="dialogTitleAcceptDelete">Are you sure?</string>
+    <string name="cxMenuEdit">Edit</string>
+    <string name="hintNewWord">New word</string>
+    <string name="hintNewTranslate">New translate</string>
+    <string name="dialogTitleNewWord">New pair of words</string>
+    <string name="btnCheck">Check</string>
+    <string name="tvTask">Translate</string>
+    <string name="hintTrue">Сщккусе!</string>
+    <string name="hintFalse">False!</string>
+    <string name="hintCorrectTranslate">Correct</string>
+    <string name="hintNext">Next</string>
+    <string name="mnSwap">Swap language</string>
+    <string name="mnShuffleOn">Shuffle on</string>
+    <string name="mnShuffleOff">Shuffle off</string>
+    <string name="btnTryAgain">Try again?</string>
+    <string name="achiveGoodJob">That\'s all! Good job!</string>
+    <!-- LOG IN -->
+    <string name="dialogTitleAuthorization">Authorization</string>
+    <string name="wrnNoInternet">Check your Internet connection!</string>
+    <string name="wrnNoFilledField">Please fill in the fields!</string>
+    <string name="wrnBadLoginPass">Incorrect login/password!</string>
+    <string name="wrnNoDicts">No dictionaries to download</string>
+    <string name="wrnChooseDict">Choose dictionary to train</string>
+    <string name="btnAuthorize">Sign in</string>
+    
+    <!-- DOWNLOAD DICTS -->
+    <string name="btnDownload">Download</string>
+    
+    <string name="wrnError">Oops! Something going wrong!</string>
+    <string name="titleWait">Wait until the dictionaries is being loaded.</string>
+    
+    <string name="tvSuccess">Success!</string>
+    <string name="toastNotAvailable">Sorry. It\'s not available now.</string>
+    <string name="btnShowMenu">Menu</string>
+    <string name="titleWaitSaving">Wait, while application is setting request parameters to first start.</string>
+    <string name="tvTotalCount">Total</string>
+    <string name="tvGoodCount">Right</string>
+    <string name="btnRememberMe">Remember me</string>
+    <string name="tvW2mem">W2mem v1.1</string>
+    <string name="tvHeaderOwnDict">You can learn vocabulary, you\'ve made for yourself:</string>
+    <string name="tvHeaderStandartDict">or use the standard made ​​specifically so that you do not waste your time:</string>
+    <!-- NO PROFILE -->
+    <string name="btnGoToSite">Go to the site now</string>
+    <string name="tvSiteInfo">To get a username and password, please visit:\n \n
+        http://w2mem.com \n \n in the Dashboard under "Android." \n \n If you do
+        not have the profile, you can sign up on the site.</string>
+    
+    <string name="toastHintContextMenu">To edit click and hold the dictionary you need</string>
+    <string name="dialogTitleWelcome">Welcome!</string>
+    <string name="standartTopic1">Русский-English 1</string>
+    <string name="standartTopic2">Русский-English 2</string>
+    <string name="standartTopic3">Русский-English 3</string>
+    <string name="standartTopic4">Русский-Deutsch 1</string>
+    <string name="standartTopic5">Русский-Deutsch 2</string>
+    <string name="standartTopic6">Русский-Deutsch 3</string>
+    <string name="standartTopic7">Русский-中国的  1</string>
+    <string name="standartTopic8">Русский-中国的  2</string>
+    <string name="standartTopic9">Русский-中国的  3</string>
+    
+    <string name="standartOriginalTopic1">en_1000</string>
+    <string name="standartOriginalTopic2">en_2000</string>
+    <string name="standartOriginalTopic3">en_3000</string>
+    <string name="standartOriginalTopic4">de_1000</string>
+    <string name="standartOriginalTopic5">de_2000</string>
+    <string name="standartOriginalTopic6">de_3000</string>
+    <string name="standartOriginalTopic7">zh_1000</string>
+    <string name="standartOriginalTopic8">zh_2000</string>
+    <string name="standartOriginalTopic9">zh_3000</string>
+
+</resources>

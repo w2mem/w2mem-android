@@ -1,0 +1,155 @@
+ECLIPSE ANDROID PROJECT IMPORT SUMMARY
+======================================
+
+Ignored Files:
+--------------
+The following files were *not* copied into the new Gradle project; you
+should evaluate whether these are still needed in your project and if
+so manually move them:
+
+* .gitignore
+* .idea/
+* .idea/compiler.xml
+* .idea/copyright/
+* .idea/copyright/profiles_settings.xml
+* .idea/encodings.xml
+* .idea/misc.xml
+* .idea/workspace.xml
+* LICENSE
+* README.md
+* app/
+* app/build.gradle
+* app/proguard.cfg
+* app/src/
+* app/src/main/
+* app/src/main/AndroidManifest.xml
+* app/src/main/java/
+* app/src/main/java/com/
+* app/src/main/java/com/w2mem/
+* app/src/main/java/com/w2mem/app/
+* app/src/main/java/com/w2mem/app/AddNewDict.java
+* app/src/main/java/com/w2mem/app/AddWordPairs.java
+* app/src/main/java/com/w2mem/app/ChooseCategory.java
+* app/src/main/java/com/w2mem/app/ChooseDict.java
+* app/src/main/java/com/w2mem/app/DownloadDicts.java
+* app/src/main/java/com/w2mem/app/Main.java
+* app/src/main/java/com/w2mem/app/NoProfile.java
+* app/src/main/java/com/w2mem/app/TrainDict.java
+* app/src/main/java/com/w2mem/app/constants/
+* app/src/main/java/com/w2mem/app/constants/DictType.java
+* app/src/main/java/com/w2mem/app/data/
+* app/src/main/java/com/w2mem/app/data/DatabaseHelper.java
+* app/src/main/java/com/w2mem/app/data/SQLiteHelper.java
+* app/src/main/java/com/w2mem/app/data/SettingsHelper.java
+* app/src/main/java/com/w2mem/app/system/
+* app/src/main/java/com/w2mem/app/system/Connector.java
+* app/src/main/java/com/w2mem/app/system/Dictionary.java
+* app/src/main/java/com/w2mem/app/system/Toaster.java
+* app/src/main/java/com/w2mem/app/system/WordPair.java
+* app/src/main/java/com/w2mem/app/unused/
+* app/src/main/java/com/w2mem/app/unused/CryptHelper.java
+* app/src/main/res/
+* app/src/main/res/drawable-hdpi/
+* app/src/main/res/drawable-hdpi/cover.png
+* app/src/main/res/drawable-hdpi/ic_launcher.png
+* app/src/main/res/drawable-land-hdpi/
+* app/src/main/res/drawable-land-hdpi/cover.png
+* app/src/main/res/drawable-land-hdpi/ic_launcher.png
+* app/src/main/res/drawable-land-ldpi/
+* app/src/main/res/drawable-land-ldpi/cover.png
+* app/src/main/res/drawable-land-ldpi/ic_launcher.png
+* app/src/main/res/drawable-land-mdpi/
+* app/src/main/res/drawable-land-mdpi/cover.png
+* app/src/main/res/drawable-land-mdpi/ic_launcher.png
+* app/src/main/res/drawable-land-xhdpi/
+* app/src/main/res/drawable-land-xhdpi/cover.png
+* app/src/main/res/drawable-land-xhdpi/ic_launcher.png
+* app/src/main/res/drawable-ldpi/
+* app/src/main/res/drawable-ldpi/cover.png
+* app/src/main/res/drawable-ldpi/ic_launcher.png
+* app/src/main/res/drawable-mdpi/
+* app/src/main/res/drawable-mdpi/cover.png
+* app/src/main/res/drawable-mdpi/fon_480x800.png
+* app/src/main/res/drawable-mdpi/fon_800x480.png
+* app/src/main/res/drawable-mdpi/ic_launcher.png
+* app/src/main/res/drawable-xhdpi/
+* app/src/main/res/drawable-xhdpi/cover.png
+* app/src/main/res/drawable-xhdpi/ic_launcher.png
+* app/src/main/res/drawable/
+* app/src/main/res/drawable/button.xml
+* app/src/main/res/drawable/button_focused.xml
+* app/src/main/res/drawable/button_normal.xml
+* app/src/main/res/drawable/button_pressed.xml
+* app/src/main/res/drawable/text_view.xml
+* app/src/main/res/layout-land/
+* app/src/main/res/layout-land/front.xml
+* app/src/main/res/layout/
+* app/src/main/res/layout/dlg_delete.xml
+* app/src/main/res/layout/dlg_edit_name.xml
+* app/src/main/res/layout/dlg_edit_pair.xml
+* app/src/main/res/layout/dlg_login.xml
+* app/src/main/res/layout/dlg_try.xml
+* app/src/main/res/layout/dlg_welcome.xml
+* app/src/main/res/layout/main_ver.xml
+* app/src/main/res/layout/v1_add_dict_name.xml
+* app/src/main/res/layout/v1_add_topic.xml
+* app/src/main/res/layout/v1_choose_category.xml
+* app/src/main/res/layout/v1_choose_dict.xml
+* app/src/main/res/layout/v1_hint.xml
+* app/src/main/res/layout/v1_test_activity.xml
+* app/src/main/res/layout/v2_download_dicts.xml
+* app/src/main/res/layout/v3_no_profile.xml
+* app/src/main/res/menu/
+* app/src/main/res/menu/addcouplescontext.xml
+* app/src/main/res/menu/choosetopiccontext.xml
+* app/src/main/res/menu/testmenu.xml
+* app/src/main/res/raw/
+* app/src/main/res/raw/de_1000
+* app/src/main/res/raw/de_2000
+* app/src/main/res/raw/de_3000
+* app/src/main/res/raw/en_1000
+* app/src/main/res/raw/en_2000
+* app/src/main/res/raw/en_3000
+* app/src/main/res/raw/zh_1000
+* app/src/main/res/raw/zh_2000
+* app/src/main/res/raw/zh_3000
+* app/src/main/res/values-ru/
+* app/src/main/res/values-ru/strings.xml
+* app/src/main/res/values/
+* app/src/main/res/values/array.xml
+* app/src/main/res/values/strings.xml
+* app/src/main/res/values/theme.xml
+* build.gradle
+* gradle/
+* gradle/wrapper/
+* gradle/wrapper/gradle-wrapper.jar
+* gradle/wrapper/gradle-wrapper.properties
+* gradlew
+* gradlew.bat
+* proguard-project.txt
+* settings.gradle
+
+Moved Files:
+------------
+Android Gradle projects use a different directory structure than ADT
+Eclipse projects. Here's how the projects were restructured:
+
+* AndroidManifest.xml => app/src/main/AndroidManifest.xml
+* proguard.cfg => app/proguard.cfg
+* res/ => app/src/main/res/
+* src/ => app/src/main/java/
+
+Next Steps:
+-----------
+You can now build the project. The Gradle project needs network
+connectivity to download dependencies.
+
+Bugs:
+-----
+If for some reason your project does not build, and you determine that
+it is due to a bug or limitation of the Eclipse to Gradle importer,
+please file a bug at http://b.android.com with category
+Component-Tools.
+
+(This import summary is for your information only, and can be deleted
+after import once you are satisfied with the results.)

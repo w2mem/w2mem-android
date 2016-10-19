@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <!-- ATARAXER's -->
+    <string name="wrnChooseDicts">Выберите словари для загрузки</string>
+    
+	<!-- GENERAL -->
+    <string name="app_name">W2mem</string>
+    <!-- MAIN MENU -->
+    <string name="btnStartOffline">Начать тесты</string>
+    <string name="btnStartOnline">Скачать словарики</string>
+    <string name="btnNoProfile">Нет профиля?</string>
+    <string name="btnNext">Далее</string>
+    <string name="btnStartTopic">Начать</string>
+    <string name="btnSave">Сохранить</string>
+    <string name="btnAccept">Принять</string>
+    <string name="btnCancel">Отменить</string>
+    <string name="btnCheck">Проверить</string>
+    <string name="btnGoToSite">Перейти на сайт</string>
+    <string name="btnRememberMe">Запомнить</string>
+    <string name="btnStartOwnDict">Свои словари</string>
+    <string name="btnStartDefaultDict">Стандартные словари</string>
+    <string name="btnStartOwnPhraseDict">Свои разговорники</string>
+    <string name="btnStartDefaultPhraseDict">Стандартные разговорники</string>
+    <string name="btnAddTopic">Добавить свой</string>
+    <string name="btnDownload">Загрузить</string>
+    <string name="btnAuthorize">Войти</string>
+    <string name="btnAddCouple">Добавить пару</string>
+    <string name="btnTryAgain">Еще раз?</string>
+    <string name="btnTry">Начать!</string>
+    <string name="btnLater">Позже</string>
+    <string name="btnShowMenu">Меню</string>
+    <!-- HINTS -->
+    <string name="hintWord">Слово</string>
+    <string name="hintNewName">Новое имя</string>
+    <string name="hintTranslate">Перевод</string>
+    <string name="hintTrue">Верно!</string>
+    <string name="hintFalse">Неверно!</string>
+    <string name="hintCorrectTranslate">Правильно</string>
+    <string name="hintLogin">Ваш ID</string>
+    <string name="hintPassword">Пароль</string>
+    <string name="hintNewWord">Новое слово</string>
+    <string name="hintNewTranslate">Перевод</string>
+    
+    <string name="menuRename">Переименовать</string>
+    <string name="menuDelete">Удалить</string>
+    <string name="menuEdit">Изменить</string>
+    
+    <string name="dialogTitleNewName">Впишите новое имя</string>
+    <string name="dialogTitleAcceptDelete">Вы уверены?</string>
+    <string name="dialogTitleNewWord">Новая пара слов</string>
+    <string name="dialogTitleAuthorization">Авторизация</string>
+    
+    <string name="tvTask">Перевести</string>
+    
+    <string name="mnSwap">Поменять языки</string>
+    <string name="mnShuffleOn">Случайный порядок включен</string>
+    <string name="mnShuffleOff">Случайный порядок выключен</string>
+    
+    <string name="achiveGoodJob">Это все! Отличная работа!</string>
+    
+    <!-- ERROR MESSAGES -->
+    <string name="wrnError">Упс! Что-то пошло не так!</string>
+    <string name="wrnNoInternet">Проверьте своё подключение к интернету!</string>
+    <string name="wrnNoFilledField">Пожалуйста, заполните все поля!</string>
+    <string name="wrnBadLoginPass">Неверный логин-пароль</string>
+    <string name="wrnEmptyEt">Вы должны заполнить поле</string>
+    <string name="wrnEmptyTopic">Выбранный словарь пустой</string>
+    <string name="wrnNoDicts">Отсутствуют словари для загрузки</string>
+    <string name="wrnChooseDict">Выберите словарь для тренировки</string>
+    <!--  -->
+    <string name="toastHintContextMenu">Удерживайте нажатым для редактирования</string>
+    <string name="titleWaitSaving">Настройка первого запуска…</string>
+    <string name="titleWait">Подождите, пока словари загружаются на ваше устройство.</string>
+    <string name="titleFinished">Словари успешно загружены! Теперь вы можете использовать их оффлайн!</string>
+    <string name="tvSuccess">Ура!</string>
+    <string name="tvHeaderOwnDict">Вы можете учить словарики, которые вы сделали сами или скачали с сайта:</string>
+    <string name="tvHeaderStandartDict">или воспользоваться стандартными, сделанными специально, чтобы вы не тратили свое время:</string>
+    <string name="tvWelcome">
+        Добро пожаловать в приложение W2mem! \n \n 
+		Приложение даёт возможность составлять личные списки слов и 
+   	    выражений на изучаемом языке и периодически проверять их знание. 
+   	    Вы сможете загрузить в него свои собственные словарики, 
+   	    которые вы составили у нас на сайте W2mem.com !	</string>
+    <string name="tvTotalCount">Всего</string>
+    <string name="tvGoodCount">Правильно</string>
+    <string name="tvSiteInfo">Получить логин и пароль вы можете на сайте:\n\n http://w2mem.com\n\nв Личном кабинете в разделе «Андроид». \n\nЕсли у вас нету профиля, то зарегистрироваться можно на сайте.</string>
+    
+
+</resources>

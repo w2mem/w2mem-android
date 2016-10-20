@@ -5,3 +5,4 @@
 ## Contributors:
 
 * Anton Karamanov https://github.com/ataraxer
+* Konstantin Rudenko https://github.com/kotya341

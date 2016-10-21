@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:orientation="vertical">
 
     <TextView
         android:id="@+id/tvHeaderOwnDict"
@@ -13,10 +13,10 @@
         android:layout_marginLeft="5dp"
         android:layout_marginRight="5dp"
         android:layout_marginTop="10dp"
-        android:text="@string/tvHeaderOwnDict"
         android:background="@drawable/text_view"
-        android:textColor="#fff"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+        android:text="@string/tvHeaderOwnDict"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#fff" />
 
     <Button
         android:id="@+id/btnStartOwnDict"
@@ -36,10 +36,10 @@
         android:layout_marginLeft="5dp"
         android:layout_marginRight="5dp"
         android:layout_marginTop="10dp"
-        android:text="@string/tvHeaderStandartDict"
         android:background="@drawable/text_view"
-        android:textColor="#fff"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+        android:text="@string/tvHeaderStandartDict"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#fff" />
 
     <Button
         android:id="@+id/btnStartDefaultDict"

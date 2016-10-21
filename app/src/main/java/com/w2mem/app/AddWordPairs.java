@@ -1,15 +1,12 @@
 package com.w2mem.app;
 
-import java.util.List;
-
 import android.app.Dialog;
-import android.app.ListActivity;
 import android.os.Bundle;
 import android.view.ContextMenu;
+import android.view.ContextMenu.ContextMenuInfo;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.ContextMenu.ContextMenuInfo;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -20,140 +17,142 @@ import com.w2mem.app.data.DatabaseHelper;
 import com.w2mem.app.system.Toaster;
 import com.w2mem.app.system.WordPair;
 
-public class AddWordPairs extends ListActivity {
-	public static final String PARENT_DICT = "parent_dict";
+import java.util.List;
 
-	/* USER INTERFACE */
-	private EditText uiEditWord;
-	private EditText uiEditTranslate;
-	private ListView uiListWordPairs;
+public class AddWordPairs extends BaseActivity {
+    public static final String PARENT_DICT = "parent_dict";
 
-	/* DATA */
-	private long dictId = 0;
-	private List<WordPair> wordPairsValues;
+    /* USER INTERFACE */
+    private EditText uiEditWord;
+    private EditText uiEditTranslate;
+    private ListView uiListWordPairs;
 
-	@Override
-	public void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-		setContentView(R.layout.v1_add_topic);
+    /* DATA */
+    private long dictId = 0;
+    private List<WordPair> wordPairsValues;
 
-		// interface binding
-		uiEditWord = (EditText) findViewById(R.id.etWord);
-		uiEditTranslate = (EditText) findViewById(R.id.etTranslate);
-		uiListWordPairs = getListView();
-		registerForContextMenu(uiListWordPairs);
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.v1_add_topic);
 
-		// gets dict id from intent
-		dictId = getIntent().getExtras().getLong(PARENT_DICT);
-		
-		wordPairsValues = DatabaseHelper.getAllWordPairsFromDict(dictId);
+        // interface binding
+        uiEditWord = (EditText) findViewById(R.id.etWord);
+        uiEditTranslate = (EditText) findViewById(R.id.etTranslate);
+        uiListWordPairs = (ListView) findViewById(R.id.list);
+        registerForContextMenu(uiListWordPairs);
 
-		ArrayAdapter<WordPair> adapter = new ArrayAdapter<WordPair>(this,
-				android.R.layout.simple_list_item_1, wordPairsValues);
-		setListAdapter(adapter);
+        // gets dict id from intent
+        dictId = getIntent().getExtras().getLong(PARENT_DICT);
 
-		((Button) findViewById(R.id.btnAddCouple)).setOnClickListener(
-				new View.OnClickListener() {
-					@Override
-					public void onClick(View v) {
-						@SuppressWarnings("unchecked")
-						ArrayAdapter<WordPair> adapter = (ArrayAdapter<WordPair>) getListAdapter();
-						String word = uiEditWord.getText().toString();
-						String translate = uiEditTranslate.getText().toString();
-						if (word.matches("") == false && translate.matches("") == false) {
-							WordPair cWord = DatabaseHelper.addAndReturnPair(word, translate, dictId);
-							adapter.add(cWord);
-							adapter.notifyDataSetChanged();
-							uiEditWord.setText("");
-							uiEditTranslate.setText("");
-						}
-					}
-				});
-	}
+        wordPairsValues = DatabaseHelper.getAllWordPairsFromDict(dictId);
 
-	@Override
-	protected void onPause() {
-		DatabaseHelper.close();
-		super.onPause();
-	}
+        ArrayAdapter<WordPair> adapter = new ArrayAdapter<WordPair>(this,
+            android.R.layout.simple_list_item_1, wordPairsValues);
+        uiListWordPairs.setAdapter(adapter);
 
-	@Override
-	public void onCreateContextMenu(ContextMenu menu, View v,
-			ContextMenuInfo menuInfo) {
-		super.onCreateContextMenu(menu, v, menuInfo);
-		MenuInflater inflater = getMenuInflater();
-		inflater.inflate(R.menu.addcouplescontext, menu);
-	}
+        ((Button) findViewById(R.id.btnAddCouple)).setOnClickListener(
+            new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    @SuppressWarnings("unchecked")
+                    ArrayAdapter<WordPair> adapter = (ArrayAdapter<WordPair>) uiListWordPairs.getAdapter();
+                    String word = uiEditWord.getText().toString();
+                    String translate = uiEditTranslate.getText().toString();
+                    if (word.matches("") == false && translate.matches("") == false) {
+                        WordPair cWord = DatabaseHelper.addAndReturnPair(word, translate, dictId);
+                        adapter.add(cWord);
+                        adapter.notifyDataSetChanged();
+                        uiEditWord.setText("");
+                        uiEditTranslate.setText("");
+                    }
+                }
+            });
+    }
 
-	@Override
-	public boolean onContextItemSelected(MenuItem item) {
-		int menuItemId = item.getItemId();
-		final int currentSelectionItemPosition = 
-				((AdapterView.AdapterContextMenuInfo) item.getMenuInfo()).position;
-		
-		switch (menuItemId) {
-		case R.id.cxMenuDeleteDict:
-			@SuppressWarnings("unchecked")
-			ArrayAdapter<WordPair> adapter = (ArrayAdapter<WordPair>) getListAdapter();
-			WordPair coupleWord = adapter
-					.getItem(currentSelectionItemPosition);
-			DatabaseHelper.removeWordPair(coupleWord.id);
-			adapter.remove(coupleWord);
-			adapter.notifyDataSetChanged();
-			return true;
+    @Override
+    protected void onPause() {
+        DatabaseHelper.close();
+        super.onPause();
+    }
 
-		case R.id.cxMenuEdit:
-			showMyDialog(currentSelectionItemPosition);
-			return true;
-		default:
-			return false;
-		}
-	}
+    @Override
+    public void onCreateContextMenu(ContextMenu menu, View v,
+                                    ContextMenuInfo menuInfo) {
+        super.onCreateContextMenu(menu, v, menuInfo);
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.addcouplescontext, menu);
+    }
 
-	private void showMyDialog(final int id) {
-		// show dialog
-		final Dialog dialog = new Dialog(this, R.style.W2memLoginDialog);
-		dialog.setContentView(R.layout.dlg_edit_pair);
-		dialog.setTitle(getResources().getString(R.string.dialogTitleNewWord));
-		dialog.show();
+    @Override
+    public boolean onContextItemSelected(MenuItem item) {
+        int menuItemId = item.getItemId();
+        final int currentSelectionItemPosition =
+            ((AdapterView.AdapterContextMenuInfo) item.getMenuInfo()).position;
 
-		@SuppressWarnings("unchecked")
-		final ArrayAdapter<WordPair> adapter = (ArrayAdapter<WordPair>) getListAdapter();
-		final EditText NewWord = (EditText) dialog
-				.findViewById(R.id.etDialogNewWord);
-		final EditText NewTranslate = (EditText) dialog
-				.findViewById(R.id.etDialogNewTranslate);
-		NewWord.setText(adapter.getItem(id).word);
-		NewTranslate.setText(adapter.getItem(id).translation);
+        switch (menuItemId) {
+            case R.id.cxMenuDeleteDict:
+                @SuppressWarnings("unchecked")
+                ArrayAdapter<WordPair> adapter = (ArrayAdapter<WordPair>) uiListWordPairs.getAdapter();
+                WordPair coupleWord = adapter
+                    .getItem(currentSelectionItemPosition);
+                DatabaseHelper.removeWordPair(coupleWord.id);
+                adapter.remove(coupleWord);
+                adapter.notifyDataSetChanged();
+                return true;
 
-		// dialog ok button click handler
-		((Button) dialog.findViewById(R.id.btnDialogAccept)).setOnClickListener(
-				new View.OnClickListener() {
-					public void onClick(View v) {
-						final String newWord = NewWord.getText().toString();
-						final String newTranslation = NewTranslate.getText().toString();
-						// updates database
-						if (newWord.matches("") == false && newTranslation.matches("") == false) {
-							long _id = adapter.getItem(id).id;
-							DatabaseHelper.changeWordPair(newWord, newTranslation, _id);
-							// updates ListView
-							wordPairsValues.get(id).word = newWord;
-							wordPairsValues.get(id).translation = newTranslation;
-							adapter.notifyDataSetChanged();
-							dialog.dismiss();
-						} else {
-							Toaster.UnfilledFields();
-						}
-					}
-				});
+            case R.id.cxMenuEdit:
+                showMyDialog(currentSelectionItemPosition);
+                return true;
+            default:
+                return false;
+        }
+    }
 
-		// dialog cancel button click handler
-		dialog.findViewById(R.id.btnDialogCancel).setOnClickListener(
-				new View.OnClickListener() {
-					@Override
-					public void onClick(View v) {
-						dialog.dismiss();
-					}
-				});
-	}
+    private void showMyDialog(final int id) {
+        // show dialog
+        final Dialog dialog = new Dialog(this, R.style.W2memLoginDialog);
+        dialog.setContentView(R.layout.dlg_edit_pair);
+        dialog.setTitle(getResources().getString(R.string.dialogTitleNewWord));
+        dialog.show();
+
+        @SuppressWarnings("unchecked")
+        final ArrayAdapter<WordPair> adapter = (ArrayAdapter<WordPair>) uiListWordPairs.getAdapter();
+        final EditText NewWord = (EditText) dialog
+            .findViewById(R.id.etDialogNewWord);
+        final EditText NewTranslate = (EditText) dialog
+            .findViewById(R.id.etDialogNewTranslate);
+        NewWord.setText(adapter.getItem(id).word);
+        NewTranslate.setText(adapter.getItem(id).translation);
+
+        // dialog ok button click handler
+        ((Button) dialog.findViewById(R.id.btnDialogAccept)).setOnClickListener(
+            new View.OnClickListener() {
+                public void onClick(View v) {
+                    final String newWord = NewWord.getText().toString();
+                    final String newTranslation = NewTranslate.getText().toString();
+                    // updates database
+                    if (newWord.matches("") == false && newTranslation.matches("") == false) {
+                        long _id = adapter.getItem(id).id;
+                        DatabaseHelper.changeWordPair(newWord, newTranslation, _id);
+                        // updates ListView
+                        wordPairsValues.get(id).word = newWord;
+                        wordPairsValues.get(id).translation = newTranslation;
+                        adapter.notifyDataSetChanged();
+                        dialog.dismiss();
+                    } else {
+                        Toaster.UnfilledFields();
+                    }
+                }
+            });
+
+        // dialog cancel button click handler
+        dialog.findViewById(R.id.btnDialogCancel).setOnClickListener(
+            new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    dialog.dismiss();
+                }
+            });
+    }
 }

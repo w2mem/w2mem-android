@@ -1,7 +1,6 @@
 
 package com.w2mem.app;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -12,7 +11,7 @@ import com.w2mem.app.constants.DictType;
 import com.w2mem.app.data.DatabaseHelper;
 import com.w2mem.app.system.Toaster;
 
-public class AddNewDict extends Activity {
+public class AddNewDict extends BaseActivity {
 	/* USER INTERFACE */
 	private EditText uiEditDictName;
 	

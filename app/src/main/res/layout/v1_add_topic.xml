@@ -2,13 +2,13 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
-
+    android:orientation="vertical">
+
     <RelativeLayout
         android:id="@+id/relativeLayout1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
-
+        android:layout_height="wrap_content">
+
         <Button
             android:id="@+id/btnAddCouple"
             android:layout_width="wrap_content"
@@ -19,7 +19,7 @@
             android:layout_margin="5dp"
             android:onClick="onClick"
             android:text="@string/btnAddCouple" />
-
+
         <EditText
             android:id="@+id/etWord"
             android:layout_width="match_parent"
@@ -29,11 +29,11 @@
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
             android:hint="@string/hintWord"
-            android:inputType="text" >
+            android:inputType="text">
 
             <requestFocus />
         </EditText>
-
+
         <EditText
             android:id="@+id/etTranslate"
             android:layout_width="match_parent"
@@ -48,9 +48,8 @@
     </RelativeLayout>
 
     <ListView
-        android:id="@+id/@android:id/list"
+        android:id="@+id/list"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
-    </ListView>
+        android:layout_height="wrap_content" />
 
 </LinearLayout>

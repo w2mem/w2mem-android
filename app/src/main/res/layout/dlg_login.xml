@@ -1,33 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" 
->
-
-    <EditText
-        android:id="@+id/etLogin"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:hint="@string/hintLogin" 
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginTop="10dp">
-
-        <requestFocus />
-    </EditText>
-
-    <EditText
-        android:id="@+id/etPassword"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/etLogin"
-        android:hint="@string/hintPassword"
-        android:inputType="textPassword"
-        android:layout_marginLeft="10dp"
-		android:layout_marginRight="10dp"/>
+    android:layout_height="match_parent">
 
     <CheckBox
         android:id="@+id/cbRememberMe"
@@ -36,7 +10,7 @@
         android:layout_below="@+id/etPassword"
         android:layout_centerHorizontal="true"
         android:text="@string/btnRememberMe" />
-    
+
     <Button
         android:id="@+id/btnAuthorize"
         android:layout_width="wrap_content"
@@ -46,5 +20,27 @@
         android:layout_marginRight="15dp"
         android:layout_marginTop="5dp"
         android:text="@string/btnAuthorize" />
+
+    <EditText
+        android:id="@+id/etLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/etPassword"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/etPassword"
+        android:hint="@string/hintLogin"
+        android:maxLines="1">
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/etPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etLogin"
+        android:layout_centerHorizontal="true"
+        android:hint="@string/hintPassword"
+        android:inputType="textPassword" />
 
 </RelativeLayout>

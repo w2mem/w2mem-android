@@ -3,7 +3,7 @@
     android:id="@+id/RelativeLayout1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal" >
+    android:orientation="horizontal">
 
     <TextView
         android:id="@+id/textView1"
@@ -37,5 +37,5 @@
         android:layout_marginRight="5dp"
         android:layout_toLeftOf="@+id/btnLater"
         android:text="@string/startNow" />
-    
+
 </RelativeLayout>

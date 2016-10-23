@@ -1,19 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="W2memTheme" parent="@android:style/Theme.Light.NoTitleBar.Fullscreen">
+    <style name="W2memTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:windowBackground">@drawable/cover</item>
         <item name="android:buttonStyle">@style/W2memButton</item>
         <item name="android:listViewStyle">@style/W2memListView</item>
     </style>
-    
-    <style name="W2memThemeWithBigSize" parent="@android:style/Theme.Light.NoTitleBar.Fullscreen">
-        <item name="android:windowBackground">@drawable/cover</item>
+
+    <style name="W2memThemeWithBigSize" parent="W2memTheme">
         <item name="android:buttonStyle">@style/W2memButtonWithBigSize</item>
-        <item name="android:listViewStyle">@style/W2memListView</item>
     </style>
-    
-   	<style name="W2memButtonWithBigSize" parent="@android:style/Widget.Button">
+
+    <style name="W2memButtonWithBigSize" parent="@android:style/Widget.Button">
         <item name="android:background">@drawable/button</item>
         <item name="android:textColor">@android:color/white</item>
         <item name="android:textSize">20dp</item>
@@ -34,7 +32,7 @@
         <item name="android:textSize">15dp</item>
     </style>
 
-    <style name="W2memLoginDialog" parent="@android:style/Theme.Dialog">
+    <style name="W2memLoginDialog" parent="Theme.AppCompat.Light.Dialog.Alert">
         <item name="android:buttonStyle">@style/W2memButton</item>
     </style>
 

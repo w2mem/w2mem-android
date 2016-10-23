@@ -3,7 +3,8 @@
     android:id="@+id/RelativeLayout1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:orientation="vertical">
+
     <EditText
         android:id="@+id/etDialogNewName"
         android:layout_width="match_parent"
@@ -12,11 +13,11 @@
         android:layout_marginLeft="5dp"
         android:layout_marginRight="5dp"
         android:layout_marginTop="10dp"
-        android:hint="@string/hintNewName" >
+        android:hint="@string/hintNewName">
 
         <requestFocus />
     </EditText>
-    
+
     <Button
         android:id="@+id/btnDialogAccept"
         android:layout_width="wrap_content"
@@ -27,7 +28,7 @@
         android:layout_marginLeft="5dp"
         android:layout_marginRight="5dp"
         android:text="@string/accept" />
-    
+
     <Button
         android:id="@+id/btnDialogCancel"
         android:layout_width="wrap_content"
